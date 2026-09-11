@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="../../styles/Components/NavBar.css">
     <link rel="stylesheet" href="../../styles/base/default.css">
     <link rel="stylesheet" href="../../styles/utilities/responsive.css">
-    <link rel="stylesheet" href="../../styles/features/cart/shopping-cart.css">
     <link rel="stylesheet" href="../../styles/features/auth/auth.css">
     <link rel="stylesheet" href="../../styles/utilities/responsive.css">
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/fontawesome/css/all.min.css">
     <title>صفحه تایید ایمیل | گالری سان تایم</title>
 </head>
 
@@ -24,27 +23,27 @@
         <div class="header-container">
             <nav class="header-nav">
                 <div class="container__header-title">
-                    <img src="assets/img/svg/st p1.svg" alt="logo" class="logo-header" loading="lazy">
+                    <img src="../../assets/img/svg/st p1.svg" alt="logo" class="logo-header" loading="lazy">
                 </div>
                 <ul class="nav-texts">
                     <li class="nav-text">
-                        <a href="index.html" class="nav-text-link">صفحه اصلی</a>
+                        <a href="../../index.html" class="nav-text-link">صفحه اصلی</a>
                     </li>
                     <li class="nav-text">
-                        <a href="productsPage.html" class="nav-text-link">محصولات</a>
+                        <a href="../products/productsPage.html" class="nav-text-link">محصولات</a>
                     </li>
                     <li class="nav-text">
-                        <a href="favorite.html" class="nav-text-link">علاقه مندی ها</a>
+                        <a href="../products/favorite.html" class="nav-text-link">علاقه مندی ها</a>
                     </li>
                     <li class="nav-text">
-                        <a href="ContactUs.html" class="nav-text-link">ارتباط با ما</a>
+                        <a href="../contact/ContactUs.html" class="nav-text-link">ارتباط با ما</a>
                     </li>
                 </ul>
                 <div class="container_btn__header">
-                    <a href="Profile.html" class="header__button-heart">
+                    <a href="../profile/profile.html" class="header__button-heart">
                         <i class="fas fa-user container-icon__header-position"></i>
                     </a>
-                    <a href="shopping-Cart.html" class="header__button-heart">
+                    <a href="../cart/shopping-cart.html" class="header__button-heart">
                         <i class="fas fa-shopping-cart container-icon__header-position"></i>
                     </a>
                     <a href="#" class="header__button-heart">
@@ -73,11 +72,17 @@
                     </p>
                 </div>
                 <div class="container-input__write-code">
-                    <input type="text" class="input-write__code">
-                    <input type="text" class="input-write__code">
-                    <input type="text" class="input-write__code">
-                    <input type="text" class="input-write__code">
-                    <input type="text" class="input-write__code">
+                    <input type="text" class="input-write__code" maxlength="1">
+                    <input type="text" class="input-write__code" maxlength="1">
+                    <input type="text" class="input-write__code" maxlength="1">
+                    <input type="text" class="input-write__code" maxlength="1">
+                    <input type="text" class="input-write__code" maxlength="1">
+                </div>
+                <div class="container-error__character">
+                    <i class="fa-solid fa-circle-xmark error-character__icon" style="color: rgb(250, 0, 0);"></i>
+                    <p class="error-character__text">
+                        کد باید شامل عدد و فقط 5 رقم باشد
+                    </p>
                 </div>
                 <div class="container-button__vertification">
                     <button class="btn-vertification">
@@ -112,12 +117,12 @@
                     </p>
                 </div>
                 <div class="item-footer">
-                    <img src="assets/img/svg/st p1.svg" alt="" class="logo" loading="lazy">
+                    <img src="../../assets/img/svg/st p1.svg" alt="" class="logo" loading="lazy">
                     <ul class="list-footer">
                         <li class="item-top__title">دسترسی سریع</li>
-                        <li class="text-link"><a href="index.html" class="item-top__link-list">صفحه اصلی</a></li>
-                        <li class="text-link"><a href="Sign-Up.html" class="item-top__link-list">ثبت نام</a></li>
-                        <li class="text-link"><a href="productsPage.html" class="item-top__link-list">محصولات</a></li>
+                        <li class="text-link"><a href="../../index.html" class="item-top__link-list">صفحه اصلی</a></li>
+                        <li class="text-link"><a href="../auth/Sign-Up.html" class="item-top__link-list">ثبت نام</a></li>
+                        <li class="text-link"><a href="../products/productsPage.html" class="item-top__link-list">محصولات</a></li>
                     </ul>
                 </div>
                 <div class="item-footer">
@@ -156,6 +161,6 @@
         </div>
     </footer>
 </body>
-<script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
-
+<script src="../../src/features/auth/email-vertification.js"></script>
+<script src="../../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
 </html>

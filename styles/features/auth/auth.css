@@ -521,6 +521,30 @@ body {
     box-shadow: 0 0 0 2px rgba(201, 160, 107, 0.08);
 }
 
+.container-error__character {
+    display: none;
+    justify-content: center;
+    
+    margin: 5px 0 10px 0;
+    
+    background-color: rgba(255, 0, 0, 0.123);
+    border-radius: var(--auth-radius);
+
+    transition-duration: 0.5s;
+}
+
+.error-character__icon{
+    font-size: 17px;
+
+    margin: 2px 0 0 5px;
+}
+
+.error-character__text{
+    color: red;
+
+    font-size: 13px;
+}
+
 .container-button__vertification,
 .container-button__resend-code {
     width: 100%;
