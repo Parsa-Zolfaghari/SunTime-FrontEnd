@@ -1,11 +1,12 @@
 {
   "name": "suntime",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Single-page watch shop with HTML, CSS, JS, featuring Swiper sliders, SweetAlert alerts, and Font Awesome icons.",
-  "main": "script.js",
+  "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "json-server --watch ./data/data.json --port 8000"
+    "server": "json-server --watch ./data/data.json --port 8000",
+    "knip": "knip"
   },
   "repository": {
     "type": "git",
@@ -34,10 +35,11 @@
   },
   "homepage": "https://github.com/Parsa-Zolfaghari/Shoping-project#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.0.0",
-    "owl.carousel": "^2.3.4",
-    "sweetalert2": "^11.23.0",
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "sweetalert2": "^11.26.25",
     "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "knip": "^6.35.1"
   }
 }
-
