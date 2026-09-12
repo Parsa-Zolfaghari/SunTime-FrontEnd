@@ -1,4 +1,4 @@
-@import url(../Responsive/responsive.css);
+@import url(../../utilities/responsive.css);
 
 /* CSS custom properties (variables) for consistent theming */
 :root {
