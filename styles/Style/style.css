@@ -1,9 +1,9 @@
 @import url("../utilities/responsive.css");
 @import url("../base/default.css");
 @import url("../Components/NHeader.css");
-/* @import url("../Header/header.css"); */
+
 @import url("../Components/NavBar.css");
-@import url("../Product/product.css");
+@import url("../features/products/product.css");
 @import url("../Components/footer.css");
 @import url("../features/cart/cart.css");
 @import url("../Components/advantage.css");
