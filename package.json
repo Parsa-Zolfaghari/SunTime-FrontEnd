@@ -31,9 +31,9 @@
   "author": "َApex",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Parsa-Zolfaghari/Shoping-project/issues"
+    "url": "https://github.com/Parsa-Zolfaghari/ُSuntime-FrontEnd/issues"
   },
-  "homepage": "https://github.com/Parsa-Zolfaghari/Shoping-project#readme",
+  "homepage": "https://github.com/Parsa-Zolfaghari/Suntime-FrontEnd#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
     "sweetalert2": "^11.26.25",

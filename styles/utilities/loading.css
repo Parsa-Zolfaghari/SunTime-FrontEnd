@@ -1,0 +1,83 @@
+.products-loader {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    min-height: 300px;
+}
+
+.loader-watch {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    animation: loader-watch-rotate 3s linear infinite;
+    color: #c5a46d;
+}
+
+.loader-watch::before,
+.loader-watch::after {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.loader-watch::after {
+    inset: 3px;
+    opacity: 0.1;
+}
+
+.loader-watch__hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 2px;
+    border-radius: 2px;
+    background-color: currentColor;
+    transform-origin: bottom center;
+}
+
+.loader-watch__hand--hour {
+    height: 18px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.loader-watch__hand--minute {
+    height: 25px;
+    transform: translateX(-50%) rotate(140deg);
+}
+
+.loader-watch__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: currentColor;
+    transform: translate(-50%, -50%);
+}
+
+.products-loader__text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.7;
+    color: #c5a46d;
+}
+
+@keyframes loader-watch-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
