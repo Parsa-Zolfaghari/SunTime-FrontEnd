@@ -10,13 +10,11 @@
     <link rel="stylesheet" href="../../styles/base/font.css">
     <link rel="stylesheet" href="../../styles/Components/footer.css">
     <link rel="stylesheet" href="../../styles/Components/NavBar.css">
-    <!-- <link rel="stylesheet" href="../../styles/Components/NHeader.css"> -->
     <link rel="stylesheet" href="../../styles/features/cart/cart.css">
-    <link rel="stylesheet" href="../../styles/features/products/favorite.css">
-    <link rel="stylesheet" href="../../styles/utilities/swiper.css">
     <link rel="stylesheet" href="../../styles/utilities/Scrollbar.css">
+    <link rel="stylesheet" href="../../styles/utilities/loading.css">
     <link rel="stylesheet" href="../../styles/features/products/productsPage.css">
-    <link rel="stylesheet" href="../../assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../assets/vendor/sweet-alert/sweetalert2.min.css">
     <title>صفحه محصولات | گالری سان تایم</title>
 </head>
 
@@ -69,321 +67,185 @@
     <!-- start main -->
     <main class="main">
         <div class="container-main">
-            <div class="container-filterings-box">
-                <div class="container__input-product">
-                    <input type="text" class="input-product" placeholder="جستجو بین محصولات...">
-                    <i class="fas fa-search search-icon__filtering"></i>
+            <!-- start products filter -->
+            <aside class="products-filter">
+
+                <div class="products-filter__header">
+                    <h2 class="products-filter__title">فیلترها</h2>
+                    
+                    <button class="products-filter__clear" type="button">
+                        حذف همه
+                    </button>
                 </div>
-                <form action="#" class="form">
-                    <div class="container-form">
-                        <div class="content-form">
-                            <div class="container-title__form">
-                                <h2 class="filterings-title__text">
-                                    فیلترها
-                                </h2>
-                            </div>
-                            <div class="container-btn__delete-filterings">
-                                <button class="btn-delete__filterings" type="reset">
-                                    پاک کردن همه فیلترها
-                                </button>
-                            </div>
-                            <div class="item__filterings">
-                                <div class="header-item__filteings">
-                                    <button class="btn-accordion">
-                                        <i class="fas fa-chevron-up chevron-icon__filterings"></i>
-                                        <span class="text-item__filterings">
-                                            مرتب سازی
-                                        </span>
-                                    </button>
-                                    <ul class="list-accordion">
-                                        <li class="list-item__input">
-                                            <input type="radio"
-                                                class="category-price__input-filterings cheap-product__input-filterings">
-                                            <label for="cheap-product__input-filterings">ارزان ترین</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="radio"
-                                                class="category-price__input-filterings new-product__input-filterings">
-                                            <label for="new-product__input-filterings"> جدید ترین</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="radio"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">گران ترین</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="header-item__filteings">
-                                    <button class="btn-accordion">
-                                        <i class="fas fa-chevron-up chevron-icon__filterings"></i>
-                                        <span class="text-item__filterings">
-                                            برند
-                                        </span>
-                                    </button>
-                                    <ul class="list-accordion">
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings cheap-product__input-filterings">
-                                            <label for="cheap-product__input-filterings">Casio</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings new-product__input-filterings">
-                                            <label for="new-product__input-filterings">Rolex</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">Seico</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">TAG Heuer</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">Breitling</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">Tissot</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">Omega</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="header-item__filteings">
-                                    <button class="btn-accordion">
-                                        <i class="fas fa-chevron-up chevron-icon__filterings"></i>
-                                        <span class="text-item__filterings">
-                                            رنگ
-                                        </span>
-                                    </button>
-                                    <div class="container-top__item-color">
-                                        <div class="color-filtering__item" id="black"></div>
-                                        <div class="color-filtering__item" id="blue"></div>
-                                        <div class="color-filtering__item" id="white"></div>
-                                    </div>
-                                    <div class="container-bottom__item-color">
-                                        <div class="color-filtering__item" id="gray"></div>
-                                        <div class="color-filtering__item" id="wormy"></div>
-                                        <div class="color-filtering__item" id="brown"></div>
-                                    </div>
-                                </div>
-                                <div class="header-item__filteings">
-                                    <button class="btn-accordion">
-                                        <i class="fas fa-chevron-up chevron-icon__filterings"></i>
-                                        <span class="text-item__filterings">
-                                            جنس
-                                        </span>
-                                    </button>
-                                    <ul class="list-accordion">
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings cheap-product__input-filterings">
-                                            <label for="cheap-product__input-filterings">فولاد</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings new-product__input-filterings">
-                                            <label for="new-product__input-filterings">چرم</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">تیتانیوم</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">طلا</label>
-                                        </li>
-                                        <li class="list-item__input">
-                                            <input type="checkbox"
-                                                class="category-price__input-filterings expensive-product__input-filterings">
-                                            <label for="expensive-product__input-filterings">سرامیک</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="header-item__filteings">
-                                    <button class="btn-accordion">
-                                        <i class="fas fa-chevron-up chevron-icon__filterings"></i>
-                                        <span class="text-item__filterings">
-                                            محدوده قیمت
-                                        </span>
-                                    </button>
-                                    <ul class="list-accordion">
-                                        <li class="list-item__input">
-                                            <input type="range" class="range-product__input-filterings">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <!-- <div class="container__main-title">
-                <h2 class="main-title">ساعت‌هایی برای هر لحظه</h2>
-            </div> -->
-            <div class="container-items__box">
-                <div class="conatiner-not__found-product">
-                    <img src="../../assets/img/svg/watch-illustration.svg" alt="Image Not Found" class="img-not__found-product" loading="lazy">
-                    <h2 class="text-not__found-product">
-                        محصولی مطابق با جستجوی شما پیدا نشد :(
-                    </h2>
+
+                <!-- Brand -->
+                <div class="products-filter__section">
+
+                    <h3 class="products-filter__section-title">
+                        برند
+                    </h3>
+
+                    <label class="products-filter__option">
+                        <span>Casio</span>
+                        <input type="checkbox" name="brand" value="casio">
+                    </label>
+
+                    <label class="products-filter__option">
+                        <span>Seiko</span>
+                        <input type="checkbox" name="brand" value="seiko">
+                    </label>
+
+                    <label class="products-filter__option">
+                        <span>Orient</span>
+                        <input type="checkbox" name="brand" value="orient">
+                    </label>
+
+                    <label class="products-filter__option">
+                        <span>Tissot</span>
+                        <input type="checkbox" name="brand" value="tissot">
+                    </label>
+
+                    <label class="products-filter__option">
+                        <span>Citizen</span>
+                        <input type="checkbox" name="brand" value="citizen">
+                    </label>
+
+                    <label class="products-filter__option">
+                        <span>Longines</span>
+                        <input type="checkbox" name="brand" value="longines">
+                    </label>
+
                 </div>
-                <!-- <div class="container-texts__product-filters">
-                    <div class="container-active__filter">
-                        <div class="container-active__filter-text">
-                            <span class="active__filter-text">
-                                فیلتر های فعال :
-                            </span>
+
+
+                <!-- Movement -->
+                <div class="products-filter__section">
+
+                    <h3 class="products-filter__section-title">
+                        دسته‌بندی
+                    </h3>
+
+                    <label class="products-filter__option">
+                        <span>اسپرت</span>
+                        <input type="checkbox" name="category" value="sport">
+                    </label>
+
+                    <label class="products-filter__option">
+                        <span>کلاسیک</span>
+                        <input type="checkbox" name="category" value="classic">
+                    </label>
+
+                    <label class="products-filter__option">
+                        <span>رسمی</span>
+                        <input type="checkbox" name="category" value="formal">
+                    </label>
+
+                    <label class="products-filter__option">
+                        <span>روزمره</span>
+                        <input type="checkbox" name="category" value="daily">
+                    </label>
+
+                </div>
+
+
+                <!-- Discount -->
+                <label class="products-filter__discount">
+
+                    <span>
+                        فقط تخفیف‌دار
+                    </span>
+
+                    <input type="checkbox" name="discount" value="discounted">
+
+                </label>
+
+                <button class="products-filter__apply-btn" type="button" id="applyFilterBtn">
+                    اعمال فیلتر
+                </button>
+            </aside>
+            <!-- end products filter -->
+
+
+            <div class="container-last__products">
+                <!-- start products toolbar -->
+                <div class="products-toolbar">
+
+                    <div class="products-toolbar__right">
+
+                        <!-- دکمه جدید فیلترها برای موبایل -->
+                        <button class="products-toolbar__filter-btn" type="button" id="filterToggleBtn">
+                            <i class="fa-solid fa-filter"></i>
+                            <span>فیلترها</span>
+                        </button>
+
+                        <div class="products-toolbar__view">
+
+                            <button class="products-toolbar__view-btn products-toolbar__view-btn--active" type="button"
+                                aria-label="نمایش شبکه‌ای">
+                                <i class="fa-solid fa-table-cells-large"></i>
+                            </button>
+
+                            <button class="products-toolbar__view-btn" type="button" aria-label="نمایش لیستی">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+
                         </div>
-                        <div class="active-filters">
-                            <span class="filter-tag">Rolex</span>
-                            <span class="filter-tag">طلایی</span>
-                            <span class="filter-tag">طلایی</span>
-                            <span class="filter-tag">طلایی</span>
+
+
+                        <div class="products-toolbar__sort">
+
+                            <i class="fa-solid fa-chevron-down products-toolbar__sort-icon"></i>
+
+                            <select class="products-toolbar__select">
+                                <option value="newest">جدیدترین</option>
+                                <option value="cheapest">ارزان‌ترین</option>
+                                <option value="expensive">گران‌ترین</option>
+                                <option value="popular">پربازدیدترین</option>
+                            </select>
+
                         </div>
+
                     </div>
-                    <div class="container-found__product">
-                        <span class="active__filter-number">
-                            0
-                        </span>
-                        <span class="active__filter-text">
-                            محصول پیدا شد
-                        </span>
+
+
+                    <div class="products-toolbar__count">
+                        <span>۱۲</span>
+                        محصول
+                    </div>
+
+                </div>
+                <!-- end products toolbar -->
+                <div class="container-last__products--texts-box">
+                    <div class="container-last__products-boxes">
+                        <div class="products-loader" id="productsLoader">
+                            <div class="loader-watch">
+                                <span class="loader-watch__hand loader-watch__hand--hour"></span>
+                                <span class="loader-watch__hand loader-watch__hand--minute"></span>
+                                <span class="loader-watch__center"></span>
+                            </div>
+
+                            <p class="products-loader__text">
+                                در حال دریافت محصولات...
+                            </p>
+                        </div>
+                        <div class="products-empty-state" id="productsEmptyState">
+                            <div class="products-empty-state__icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+
+                            <h3 class="products-empty-state__title">
+                                محصولی برای نمایش وجود ندارد
+                            </h3>
+
+                            <p class="products-empty-state__text">
+                                در حال حاضر هیچ محصولی در این بخش موجود نیست.
+                            </p>
+                        </div>
+                        <div class="last__product">
+
+                        </div>
                     </div>
                 </div>
-                <div class="items-box">
-                     <div class="item-box"> 
-                        <img src="../../assets/img/boxes/pexels-alexazabache-3766111.jpg" alt="img" class="img-box">
-                        <div class="item-box__details">
-                            <h2 class="title-box">ساعت رولکس مدل عقابی</h2>
-                            <p class="description-box">ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی
-                                ساعت
-                                رولکس مدل عقابی</p>
-                            <div class="container-price">
-                                <p class="price-title">قیمت :
-                                <p class="price-text"><span class="price-num">100,000</span> تومان</p>
-                                </p>
-                            </div>
-                            <div class="footer-box">
-                                <button class="header__button-heart">
-                                    <i class="fa-regular fa-heart container-icon__header"></i>
-                                </button>
-                                <a href="#" class="btn-boxes">افزودن به سبد خرید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-box">
-                        <img src="../../assets/img/boxes/pexels-ferarcosn-190819.jpg" alt="img" class="img-box">
-                        <div class="item-box__details">
-                            <h2 class="title-box">ساعت رولکس مدل عقابی</h2>
-                            <p class="description-box">ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی
-                                ساعت
-                                رولکس مدل عقابی</p>
-                            <div class="container-price">
-                                <p class="price-title">قیمت :
-                                <p class="price-text"><span class="price-num">100,000</span> تومان</p>
-                                </p>
-                            </div>
-                            <div class="footer-box">
-                                <button class="header__button-heart">
-                                    <i class="fa-regular fa-heart container-icon__header"></i>
-                                </button>
-                                <a href="#" class="btn-boxes">افزودن به سبد خرید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-box">
-                        <img src="../../assets/img/boxes/pexels-natri-128621.jpg" alt="img" class="img-box">
-                        <div class="item-box__details">
-                            <h2 class="title-box">ساعت رولکس مدل عقابی</h2>
-                            <p class="description-box">ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی
-                                ساعت
-                                رولکس مدل عقابی</p>
-                            <div class="container-price">
-                                <p class="price-title">قیمت :
-                                <p class="price-text"><span class="price-num">100,000</span> تومان</p>
-                                </p>
-                            </div>
-                            <div class="footer-box">
-                                <button class="header__button-heart">
-                                    <i class="fa-regular fa-heart container-icon__header"></i>
-                                </button>
-                                <a href="#" class="btn-boxes">افزودن به سبد خرید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-box">
-                        <img src="../../assets/img/boxes/pexels-pixabay-68201.jpg" alt="img" class="img-box">
-                        <div class="item-box__details">
-                            <h2 class="title-box">ساعت رولکس مدل عقابی</h2>
-                            <p class="description-box">ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی
-                                ساعت
-                                رولکس مدل عقابی</p>
-                            <div class="container-price">
-                                <p class="price-title">قیمت :
-                                <p class="price-text"><span class="price-num">100,000</span> تومان</p>
-                                </p>
-                            </div>
-                            <div class="footer-box">
-                                <button class="header__button-heart">
-                                    <i class="fa-regular fa-heart container-icon__header"></i>
-                                </button>
-                                <a href="#" class="btn-boxes">افزودن به سبد خرید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-box">
-                        <img src="../../assets/img/boxes/pexels-alexazabache-3766111.jpg" alt="img" class="img-box">
-                        <div class="item-box__details">
-                            <h2 class="title-box">ساعت رولکس مدل عقابی</h2>
-                            <p class="description-box">ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی
-                                ساعت
-                                رولکس مدل عقابی</p>
-                            <div class="container-price">
-                                <p class="price-title">قیمت :
-                                <p class="price-text"><span class="price-num">100,000</span> تومان</p>
-                                </p>
-                            </div>
-                            <div class="footer-box">
-                                <button class="header__button-heart">
-                                    <i class="fa-regular fa-heart container-icon__header"></i>
-                                </button>
-                                <a href="#" class="btn-boxes">افزودن به سبد خرید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-box">
-                        <img src="../../assets/img/boxes/pexels-ferarcosn-190819.jpg" alt="img" class="img-box">
-                        <div class="item-box__details">
-                            <h2 class="title-box">ساعت رولکس مدل عقابی</h2>
-                            <p class="description-box">ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی ساعت رولکس مدل عقابی
-                                ساعت
-                                رولکس مدل عقابی</p>
-                            <div class="container-price">
-                                <p class="price-title">قیمت :
-                                <p class="price-text"><span class="price-num">100,000</span> تومان</p>
-                                </p>
-                            </div>
-                            <div class="footer-box">
-                                <button class="header__button-heart">
-                                    <i class="fa-regular fa-heart container-icon__header"></i>
-                                </button>
-                                <a href="#" class="btn-boxes">افزودن به سبد خرید</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div> -->
             </div>
         </div>
     </main>
@@ -409,8 +271,10 @@
                     <ul class="list-footer">
                         <li class="item-top__title">دسترسی سریع</li>
                         <li class="text-link"><a href="../../index.html" class="item-top__link-list">صفحه اصلی</a></li>
-                        <li class="text-link"><a href="../auth/Sign-Up.html" class="item-top__link-list">ثبت نام</a></li>
-                        <li class="text-link"><a href="../products/productsPage.html" class="item-top__link-list">محصولات</a></li>
+                        <li class="text-link"><a href="../auth/Sign-Up.html" class="item-top__link-list">ثبت نام</a>
+                        </li>
+                        <li class="text-link"><a href="../products/productsPage.html"
+                                class="item-top__link-list">محصولات</a></li>
                     </ul>
                 </div>
                 <div class="item-footer">
@@ -451,27 +315,9 @@
     <!-- end footer -->
 
 
-    <script src="../../src/features/home/home.js"></script>
-    <script>
-        $(document).ready(function () {
-            var owl = $('.owl-carousel');
-            owl.owlCarousel({
-                loop: true,
-                nav: true,
-                margin: 10,
-                responsive: {
-                    0: { items: 1 },
-                    780: { items: 2 },
-                    1000: { items: 3 }
-                }
-            });
-            owl.on('mousewheel', '.owl-stage', function (e) {
-                if (e.deltaY > 0) owl.trigger('next.owl');
-                else owl.trigger('prev.owl');
-                e.preventDefault();
-            });
-        });
-    </script> -->
+    <script src="../../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="../../src/features/products/productFilter.js"></script>
+    <script src="../../src/features/products/productsPage.js" type="module"></script>
 </body>
 
 </html>

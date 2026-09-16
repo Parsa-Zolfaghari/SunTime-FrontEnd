@@ -222,7 +222,6 @@ main {
 
 .container-last__products--texts-box {
     width: 80%;
-    /* text-align: center; */
     margin: 0 auto 0 auto;
 }
 
@@ -234,7 +233,6 @@ main {
 .container-last__product-texts--right {
     display: flex;
     flex-direction: column;
-    /* margin-right: 30px; */
 }
 
 .last-product__text-gold {
