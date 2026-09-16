@@ -1,7 +1,7 @@
-const BASE_URL = 'https://sun-time-project-backend-mu.vercel.app';
+const API_BASE_URL = 'https://sun-time-project-backend-mu.vercel.app/api';
 
 const signupForm = document.querySelector('.auth-form');
-const submitButton = document.querySelector('.auth-submit');
+const submitBtn = document.querySelector('.auth-submit');
 
 signupForm.addEventListener('submit', async function (event) {
     event.preventDefault();
